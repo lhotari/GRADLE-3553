@@ -1,11 +1,22 @@
+# Project that reproduces GRADLE-3553 bug
+
+## Setup 
+
 run
 ```
 ./setup.sh
 ```
 
-then move into proj1
+## Reproducing
 
-then run
+run
 ```
-../gradlew -g ../gradle-user-home --include-build ../proj2 tasks
+./run_test.sh
+```
+
+## Debugging with local gradle version
+
+```
+echo 'org.gradle.debug=true' > gradle-user-home/gradle.properties 
+GRADLE_CMD=/tmp/gradle-install/bin/gradle ./run_test.sh 
 ```
