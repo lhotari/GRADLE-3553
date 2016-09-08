@@ -1,0 +1,19 @@
+initscript {
+  repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+
+  dependencies {
+    File searchDir = gradle.startParameter.currentDir
+    new File(searchDir, 'plugins.txt').text.trim().split(';').each {
+      println it
+      classpath it.trim()
+    }
+  }
+}
+
+gradle.apply plugin: com.example.InitPlugin

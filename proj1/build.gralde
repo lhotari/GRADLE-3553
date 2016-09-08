@@ -1,0 +1,8 @@
+apply plugin: 'java'
+
+dependencies {
+  compile 'com.foo:proj2:+'
+}
+
+group = 'com.bar'
+version = '1.2.3'

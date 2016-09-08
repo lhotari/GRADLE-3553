@@ -1,0 +1,4 @@
+apply plugin: 'java'
+
+group = 'com.foo'
+version = '1.0.0'
