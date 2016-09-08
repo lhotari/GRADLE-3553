@@ -8,7 +8,7 @@ initscript {
   }
 
   dependencies {
-    File searchDir = gradle.startParameter.currentDir
+    File searchDir = gradle.startParameter.projectDir
     new File(searchDir, 'plugins.txt').text.trim().split(';').each {
       println it
       classpath it.trim()
